@@ -12,5 +12,6 @@
 
 	- Instalar o git e criar o repositorio POO_2020_2 (ok)
 
-	- Ler os capitulos 1, 2 e 3 da apostila caelum de POO em java (in progress...)
+	- Ler os capitulos 1, 2 e 3 da apostila caelum de POO em java (ok)
+	-------------------------- finish -------------------------------
 
