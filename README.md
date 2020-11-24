@@ -18,6 +18,8 @@
    S01E02:
    	
 	- Realizacao da pratica do git e github (ok)
+	
 	- Realizar o primeiro commit e incluir arquivos de teste para entender o git (ok)
+	
 	- adicionar o "Hello world" em java no repositorio (ok)
-
+	------------------------ finish ----------------------------------
