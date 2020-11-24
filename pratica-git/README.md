@@ -25,42 +25,48 @@ Instalação:
 
 Trabalhando com seu repositório Git: 
 
-    *Crie seu repositório no github.
-    *Marque a opção Iniciar com Readme.
-    *Copie o link do repositório
-    *No seu computador
-    *Crie uma pasta usando o gerenciador de arquivos.
-    *Entre na pasta.
-    *Clique com o botão direito do mouse e escolha abrir com git bash
-    *Dentro da pasta digite:
-    *git clone url_do_seu_repositório
-    *Adicionar & Confirmar & Enviar pra nuvem
-    *Você pode ver o estado atual do repositório com
-    *git status
+    Crie seu repositório no github.
+    Marque a opção Iniciar com Readme.
+    Copie o link do repositório
+    No seu computador
+    Crie uma pasta usando o gerenciador de arquivos.
+    Entre na pasta.
+    Clique com o botão direito do mouse e escolha abrir com git bash
+    Dentro da pasta digite:
+    git clone url_do_seu_repositório
+    Adicionar & Confirmar & Enviar pra nuvem
+    Você pode ver o estado atual do repositório com
+    git status
     Você pode propor mudanças (adicioná-las ao Index) usando algum dos seguintes comandos
-    *git add <arquivo>
-    *git add *
-    *git add .
+    git add <arquivo>
+    git add *
+    git add .
     Este é o primeiro passo no fluxo de trabalho básico do git. Para realmente confirmar estas mudanças (isto é, fazer um commit), use
-    *git commit -m "comentários das alterações"
+    git commit -m "comentários das alterações"
     Agora o arquivo é enviado para o HEAD, mas ainda não para o repositório remoto.
     Para visualizar seus "saves" no repositório local use
-    *git log
+    git log
     Se você já vinculou os repositórios, pode enviar seus commits para o repositório remoto utilizando
-    *git push origin master
+    git push origin master
 
 Conflitos:
-    *Se estiver trabalhando com várias máquinas, ao acessar uma máquina e tentar dar o commit, o git vai avisar que já existem atualizações remotas. Lembre de sempre dar o git pull origin master antes de trabalhar numa nova pasta.
-    Se existem conflitos e você quer sobrescrever o repositório remoto com o que existe no repositório local você pode fazer um git push origin master --force.
+
+    Se estiver trabalhando com várias máquinas, ao acessar uma máquina e tentar dar o commit, o git vai avisar que já existem atualizações remotas.
+    Lembre de sempre dar o git pull origin master antes de trabalhar numa nova pasta.
+    Se existem conflitos e você quer sobrescrever o repositório remoto com o que existe no repositório local você pode fazer um:
+    git push origin master --force.
 
 Ignorando arquivos:
-    *Crie um arquivo .gitignore no root no repositório e adicione quais tipos de arquivos você não quer que sejam rastreados pelo git.
+   
+	Crie um arquivo .gitignore no root no repositório e adicione quais tipos de arquivos você não quer que sejam rastreados pelo git.
 
 Desfazendo alterações e vendo diferenças:
-    *Pode pode ver as diferenças com o comando git diff nome_do_arquivo.
-    *Pode desfazer as últimas alterações utilizando git checkout -- nome_do_arquivo.
+   
+    Pode pode ver as diferenças com o comando git diff nome_do_arquivo.
+    Pode desfazer as últimas alterações utilizando git checkout -- nome_do_arquivo.
 
 Guia rápida:
+   
     git init: inicializar um repositório na pasta local
     git add remote origin url: vincula o repositório local no repositório remoto
     git clone url: copia o repositório remoto para pasta local
