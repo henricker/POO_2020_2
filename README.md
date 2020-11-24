@@ -15,3 +15,9 @@
 	- Ler os capitulos 1, 2 e 3 da apostila caelum de POO em java (ok)
 	-------------------------- finish -------------------------------
 
+   S01E02:
+   	
+	- Realizacao da pratica do git e github (ok)
+	- Realizar o primeiro commit e incluir arquivos de teste para entender o git (ok)
+	- adicionar o "Hello world" em java no repositorio (ok)
+
