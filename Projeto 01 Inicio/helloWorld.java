@@ -1,9 +1,6 @@
-
-
-
-	public class helloWorld{
-		public static void main(String[] args){
-			System.out.println("Hello world!");
-		}
-		//Hello world java!
+//Ola javinha!
+public class helloWorld{
+	public static void main(String[] args){
+		System.out.println("Hello world!");
 	}
+}
