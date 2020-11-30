@@ -150,6 +150,8 @@ public class Calango {
             this.life -= 10;
             if(this.life <= 0)
                 this.killCalanguin();
+            
+            System.out.println("Vida restante: " + this.life);
         }
         else{
             this.walked += 1;
@@ -165,6 +167,36 @@ public class Calango {
         this.life = 0;
         System.out.println("O calango estah morto...");
         return;
+    }
+
+    void buyLife(int extraLife) {
+        /*
+            Eh um metodo simples para regenerar a vida do nosso calanguinho
+            
+            O metodo recebe como parametro a quantidade de vida desejada que queira
+            regenerar, e eh descontado a partir do nivel de experiencia
+
+            exemplo:
+                Se nosso calango estiver com uma vida de 20% e nivel de experiencia de 60
+                caso queiramos adicionar 30% de vida:
+                    O calango vai ficar com 50% de vida e 30 de nivel de experiencia
+        */
+        if(this.experience == 0) {
+            System.out.println("Voce nao tem experiencia para comprar vida!!\n");
+            return;
+        }
+        if(this.life == 100) {
+            System.out.println("O calango ja esta com a vida cheia!\n");
+            return;
+        }
+
+        this.life += extraLife;
+        this.experience -= extraLife;
+        if(this.life > 100)
+            this.life = 100;
+        
+        System.out.println("regenerando vida...\n");
+        System.out.println("Vida atual: " + this.life);
     }
 
     public String toString() {
@@ -184,16 +216,21 @@ public class Calango {
             System.out.println("- Alimenar: 'comer numero_de_insetos'");
             System.out.println("- Caminhar: 'caminhar'");
             System.out.println("- Matar: 'matar'");
+            System.out.println("- Regenerar vida: 'cura quantidade_cura'");
             System.out.println("- mostrar dados: 'show'");
-            System.out.println("- Finalizar execucao: 'sair'");
+            System.out.println("- Finalizar execucao: 'sair'\n\n");
 
             //recebendo valores de input
+            System.out.print("Sua opcao: ");
             String receive = input.nextLine();
             String[] Array = receive.split(" ");
             System.out.println();
 
             if(Array[0].equals("comer")) {
                 c.eating(Integer.parseInt(Array[1]));
+            }
+            else if(Array[0].equals("cura")) {
+                c.buyLife(Integer.parseInt(Array[1]));
             }
             else if(Array[0].equals("buscar")) {
                 c.huntBug();
