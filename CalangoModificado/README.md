@@ -16,3 +16,7 @@ Na aula vista, vimos como funciona os fundamentos de POO em java, o professor pa
 - `toWalk()`: Caso o animal esteja vivo, a funcao faz com que o calango se movimente atribuindo +1 ao atributo `walked` caso ele tenha comida armazenada no estômago, ele a utiliza como energia (perdendo -1 de energia contida), caso contrario ele gasta a propria vida para caminhar (perdendo -10 de vida para cada +1 no walked).
 - `killCalanguim()`: Esse metodo mata o calango, alterando sua vida para zero.
 
+## Upgrades futuros
+    - []  Método para regenerar parte da vida.
+
+Para saber mais, veja o meu código.

@@ -138,6 +138,12 @@ public class Calango {
 
             caso nao tenha energia, o calango sacrifica 10% de vida.
         */
+
+        if(this.life == 0) {
+            System.out.println("Um calango morto nao anda seu animal!");
+            return;
+        }
+
         if (this.stomash == 0) {
             System.out.println("Calanguinho mesmo com fome ainda arrisca sua vida para passear...");
             this.walked += 1;
