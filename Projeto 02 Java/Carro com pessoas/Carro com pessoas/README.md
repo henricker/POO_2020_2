@@ -22,9 +22,10 @@
           entao o carro dirigi ate o seu limite e emite um aviso: "Acabou o combustivel em n
           kilometros percorridos".
     
-    [](controller.png)
+  
     ## Para o controle desses metodos e atributos fiz uma main interativa
      Assim o usuario pode usar e abusar das metodos e atributos criados.
+     [](controller.png)
        
 
     
