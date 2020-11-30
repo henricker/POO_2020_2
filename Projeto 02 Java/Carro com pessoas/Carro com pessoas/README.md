@@ -25,4 +25,4 @@
     ## Para o controle desses metodos e atributos fiz uma main interativa
         Assim o usuario pode usar e abusar das metodos e atributos criados.
 
-        ![controller main](controller.png);
+        ![controller main](controller.png)
