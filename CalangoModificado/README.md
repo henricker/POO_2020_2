@@ -6,7 +6,7 @@ Na aula vista, vimos como funciona os fundamentos de POO em java, o professor pa
 - `life`: Vida do meu animal, por padrão quando instanciado vem "100%";
 - `Stomach`: Se refere a quantidade de comida armazenada em sua barriga;
 - `MaxStomachCapacity`: Refere-se a capacidade máxima de comida que pode ser armazenada no estômago do calango;
-- `experience`: O nivel de habilidades de caça do animal, a medida que ele cresce, maior a probabilidade de encontrar mais insetos;
+- `experience`: O nivel de habilidades de caça do animal, a medida que ele cresce, maior a probabilidade de encontrar mais insetos, o nivel MAXIMO de experiencia é 100;
 - `walked`: A quantidade que o animal percorreu.
 
 ## Métodos da classe
