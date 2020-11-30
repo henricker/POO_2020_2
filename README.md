@@ -33,7 +33,7 @@
 - Lecture
     - Ler o capítulo 4 da apostila da Caelum.
 - Classwork
-    - [ ] Aprender a fazer código interativo e treinar
+    - [x] Aprender a fazer código interativo e treinar
 - Homework
     - Opção 1: Fazer o projeto do [Carro](https://github.com/qxcodepoo/arcade/blob/master/base/002/Readme.md).
     - Opção 2: Iniciar um projeto do zero à sua escolha. Seu projeto deve ter no mínimo:
