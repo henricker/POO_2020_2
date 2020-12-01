@@ -1,38 +1,41 @@
 ## Relatório
 
-## O que fez?
-    * Fiz ambas as atividades:
-        - As modificacoes e criacao de novos metodos no projeto 'Calango', 
-        - A criacao do projeto 'Carro'.
-
-## Com quem fez?
-    Ambas as atividades fiz sozinho.
+1. O que fez?
     
-## Como fez?
+    * Fiz ambas as atividades:
+        * As modificacoes e criacao de novos metodos no projeto 'Calango', 
+        * A criacao do projeto 'Carro'.
+
+2. Com quem fez?
+    
+    * Ambas as atividades fiz sozinho, com o auxilio dos codigos em sala e com a aposlila Caelum.
+    
+3. Como fez?
 
     * Em ambos os projetos, utilizei os conhecimentos vistos em sala:
-        - Construtores
-        - Apliquei os métodos e os devidos atributos.
-        - Apliquei uma main interativa
+        * Construtores
+        * Apliquei os métodos e os devidos atributos.
+        * Apliquei uma main interativa
     
     * No projeto 'Calango Modificado':
-            * fiz uma alteracao em algumas partes do projeto feito em aula, criei novos metodos:
             
-            * Os novos atributos que criei:
-                * Experiencia: Se refere ao nivel de experiencia do calango.
+         * fiz uma alteracao em algumas partes do projeto feito em aula, criei novos metodos:
 
-                * Life: Se refere a vida do animal.
+          
+        * Os novos atributos que criei:
+            * Experiencia: Se refere ao nivel de experiencia do calango.
+
+            * Life: Se refere a vida do animal.
             
-            * Os novos metodos que criei sao:
-                - Metodo huntBug():  onde o calango busca insetos para se alimentar, 
-                na criação do projeto utilizei a classe Random que importei para gerar 
-                números aleatórios para dar uma maior realidade
+        * Os novos metodos que criei sao:
+            * Metodo huntBug():  onde o calango busca insetos para se alimentar, na criação do projeto utilizei a classe Random que importei para gerar números aleatórios para dar uma maior realidade
             
             * Metodo killCalanguim(): Destroi a vida do calango
 
             * Metodo buyLife(): Para que o nosso calango não morra,
              podemos comprar quantidades de vida a partir da sua propria
              experiencia do animal.
+           
         
 
     * No projeto 'Carro com pessoas':
@@ -48,15 +51,18 @@
     * Para mais informações, consulte a pasta de código
     de ambos os projetos.
     
-## O que aprendeu?
-    Bom, eu Já possuia conhecimentos prévios de orientacao a objetos,
+4. O que aprendeu?
+    
+    * Bom, eu Já possuia conhecimentos prévios de orientacao a objetos,
     porem eram em linguagens diferentes ( python, c++ e php),
     o uso de OO em java está possibilitando de que eu possa conhecer 
     melhor essa linguagem.
     
     Reforçou meus conhecimentos sobre construtores e como manipulá-los em java.
     
-    não tive dificuldade na tarefa, mas deu um certo trabalho na tarefa.
+    não tive dificuldade na tarefa, mas deu um certo trabalho de tempo.
     
-## Quanto tempo levou?
-    Para fazer dois projetos demorei cerca de 2 horas.
+5. Quanto tempo levou?
+    
+    * Para fazer dois projetos demorei cerca de 2 horas, alem disso realizei a leitura da apostila Caelum e algumas video-aulas para fixar a linguagem java em
+    uma duração de 1,5 horas.
