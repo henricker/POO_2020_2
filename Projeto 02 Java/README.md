@@ -30,7 +30,7 @@
             
             * Metodo killCalanguim(): Destroi a vida do calango
 
-            * Metodo buyLife(): Para que o nosso calango nao morra,
+            * Metodo buyLife(): Para que o nosso calango não morra,
              podemos comprar quantidades de vida a partir da sua propria
              experiencia do animal.
         
@@ -49,14 +49,14 @@
     de ambos os projetos.
     
 ## O que aprendeu?
-    Bom, eu ja possuia conhecimentos previos de orientacao a objetos,
+    Bom, eu Já possuia conhecimentos prévios de orientacao a objetos,
     porem eram em linguagens diferentes ( python, c++ e php),
-    o uso de OO em java esta possibilitando de que eu possa conhecer 
+    o uso de OO em java está possibilitando de que eu possa conhecer 
     melhor essa linguagem.
     
-    Reforcou meus conhecimentos sobre construtores e como manipula-los em java.
+    Reforçou meus conhecimentos sobre construtores e como manipulá-los em java.
     
-    Nao tive dificuldade na tarefa, mas deu um certo trabalho na tarefa.
+    não tive dificuldade na tarefa, mas deu um certo trabalho na tarefa.
     
 ## Quanto tempo levou?
     Para fazer dois projetos demorei cerca de 2 horas.
