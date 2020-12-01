@@ -24,8 +24,9 @@
                 * Life: Se refere a vida do animal.
             
             * Os novos metodos que criei sao:
-                - Metodo huntBug():  onde o calango busca insetos para se alimentar, na
-                criação do projeto utilizei a classe Random que importei para gerar núme- ros aleatórios para dar uma maior realidade
+                - Metodo huntBug():  onde o calango busca insetos para se alimentar, 
+                na criação do projeto utilizei a classe Random que importei para gerar 
+                números aleatórios para dar uma maior realidade
             
             * Metodo killCalanguim(): Destroi a vida do calango
 
