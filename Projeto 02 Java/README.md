@@ -58,9 +58,9 @@
     o uso de OO em java está possibilitando de que eu possa conhecer 
     melhor essa linguagem.
     
-    Reforçou meus conhecimentos sobre construtores e como manipulá-los em java.
+    * Reforçou meus conhecimentos sobre construtores e como manipulá-los em java.
     
-    não tive dificuldade na tarefa, mas deu um certo trabalho de tempo.
+    * não tive dificuldade na tarefa, mas deu um certo trabalho de tempo.
     
 5. Quanto tempo levou?
     
