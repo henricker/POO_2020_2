@@ -34,7 +34,7 @@
 
             * Metodo buyLife(): Para que o nosso calango não morra,
              podemos comprar quantidades de vida a partir da sua propria
-             experiencia do animal.
+             experiencia.
            
         
 
