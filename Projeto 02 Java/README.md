@@ -1,7 +1,9 @@
 ## Relatório
 
 ## O que fez?
-    Fiz ambas as atividades, tanto as modificacoes e criacao de novos metodos no projeto 'Calango', quanto a criacao do projeto 'Carro'.
+    * Fiz ambas as atividades:
+        - As modificacoes e criacao de novos metodos no projeto 'Calango', 
+        - A criacao do projeto 'Carro'.
 
 ## Com quem fez?
     Ambas as atividades fiz sozinho.
