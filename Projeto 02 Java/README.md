@@ -9,15 +9,23 @@
     Ambas as atividades fiz sozinho.
     
 ## Como fez?
-        
-    No projeto 'Calango Modificado' utilizei os conceitos vistos em sala de aula, apliquei o construtor, os metodos e os seus devidos atributos, fiz uma alteracao em algumas partes do projeto feito em aula, criei novos metodos:
-        Os novos atributos que criei:
-            * Experiencia: Se refere ao nivel de experiencia do calango, enquanto ele busca insetos para se alimentar, vai elevando seu nivel, e com isso podera caçar mais e mais insetos com o crescer do seu nivel.
 
-            * Life: Se refere a vida do animal, em alguns casos, quando ele estiver andando e nao possuir energia armazenada, ele passa a perder quantidades significativas de vida.
+    * Em ambos os projetos, utilizei os conhecimentos vistos em sala:
+        - Construtores
+        - Apliquei os métodos e os devidos atributos.
+        - Apliquei uma main interativa
+    
+    * No projeto 'Calango Modificado':
+            * fiz uma alteracao em algumas partes do projeto feito em aula, criei novos metodos:
             
-        Os novos metodos que criei sao:
-            * Metodo huntBug():  onde o calango busca insetos para se alimentar, na criacao deste metodo utilizei a class Random ( que gera numeros aleatorios) importada no proprio java.
+            * Os novos atributos que criei:
+                * Experiencia: Se refere ao nivel de experiencia do calango.
+
+                * Life: Se refere a vida do animal.
+            
+            * Os novos metodos que criei sao:
+                - Metodo huntBug():  onde o calango busca insetos para se alimentar, na
+                criação do projeto utilizei a classe Random que importei para gerar núme- ros aleatórios para dar uma maior realidade
             
             * Metodo killCalanguim(): Destroi a vida do calango
 
