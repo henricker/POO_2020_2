@@ -37,7 +37,8 @@
 
     * No projeto 'Carro com pessoas':
         
-        * utilizei os mesmos conceitos vistos para o projeto 'Calango Modificado' e fiz tudo como se pede no enunciado do projeto
+        * utilizei os mesmos conceitos vistos para o projeto 'Calango Modificado'
+        e fiz tudo como se pede no enunciado do projeto
 
     
 
