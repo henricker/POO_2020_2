@@ -1,0 +1,22 @@
+
+//Irei criar uma calculadora de IMC
+import java.util.Scanner;
+
+public class IMC {
+    public static void main(String[] args) {
+        //Instanciando nosso objeto do tipo Scanner
+        Scanner input = new Scanner(Systen.in);
+
+        //Para calcular o IMC, devemos ter o peso e altura 
+        double peso = input.nextDouble();
+        double altura = input.nextDouble();
+
+        //O calculo do IMC ==> IMC = peso/(altura*altura)
+        double IMC = peso/(altura*altura);
+
+        //Imprimindo o resultado no console
+        System.out.println("Seu IMC eh: " + IMC);        
+
+    }
+
+}
