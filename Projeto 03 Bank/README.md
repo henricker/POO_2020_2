@@ -41,7 +41,7 @@ Projeto realizado na IDE eclipse.
             - RG: Registro Geral
             - CPF: Cadastro de Pessoas Físicas 
 
-            - getters e setters desses atributos.
+            - getters desses atributos.
 
             - toString() --> Retorna os dados do cliente em forma de uma string
             
