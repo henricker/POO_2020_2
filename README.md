@@ -45,7 +45,7 @@
 
 ## S03E01 - Java Várias Classes
 - Lecture
-    - [ ] Ler o capítulo 5 da apostila da Caelum para próxima semana.
+    - [x] Ler o capítulo 5 da apostila da Caelum para próxima semana.
     - [x] Olhar o funcionamento do arraylist: [LINK](https://www.w3schools.com/java/java_arraylist.asp)
 - Classworw
     - Dois objetos do mesmo tipo se relacionando `this` e `other`.
@@ -55,7 +55,7 @@
     - Mínimo de 2 classes, construtores, toStrings, 3 atributos, 4 métodos, main interativa.
     - Deve existir uma relação de Agregação (uma classe conter a outra).
 - [x] Colocar seus códigos na pasta **Projeto 03 Cofre**.
-- [ ] Fazer um relatório dos seus estudos da semana no arquivo Readme.md dessa pasta.
+- [x] Fazer um relatório dos seus estudos da semana no arquivo Readme.md dessa pasta.
 
 ## S03E02 - Java Várias Classes - Prática
 - Aprender sobre enumerações no projeto do Cofre
