@@ -1,3 +1,5 @@
+# Aqui estarão dispostos todos os projetos realizados na disciplina de POO
+
 ## S01 - Atividades
 - Leitura
 - Atividades
