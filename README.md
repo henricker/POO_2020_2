@@ -98,9 +98,9 @@
 
 ## S04E02 - ArrayList - Tripas
 - Read
-    - [ ] Olhar o Array na apostila da Caelum: [LINK](https://www.caelum.com.br/apostila-java-orientacao-objetos/um-pouco-de-arrays#desafios-opcionais)
-    - [ ] Olhar o funcionamento do arraylist: [LINK](https://www.w3schools.com/java/java_arraylist.asp)
-    - [ ] Estudar pelo código [LINK](s04e02_arraylist/Vetores.java)
+    - [x] Olhar o Array na apostila da Caelum: [LINK](https://www.caelum.com.br/apostila-java-orientacao-objetos/um-pouco-de-arrays#desafios-opcionais)
+    - [x] Olhar o funcionamento do arraylist: [LINK](https://www.w3schools.com/java/java_arraylist.asp)
+    - [x] Estudar pelo código [LINK](s04e02_arraylist/Vetores.java)
 - Goal
     - Aprender como funcionam os Arrays e os Arraylists em Java
     - Aprender as operações básicas de inserir, percorrer, listar, remover no Arrayslist
@@ -110,8 +110,8 @@
         - Mínimo de 2 classes, construtores, toStrings.
         - Manipulação de objetos no vetor: inserção, remoção, busca.
         - Deve existir uma relação de Agregação (uma classe conter a outra) e manipulação do objeto.
-    - [ ] Colocar seus códigos na pasta **Projeto 04 ArrayList**.
-    - [ ] Fazer o relatório
+    - [x] Colocar seus códigos na pasta **Projeto 04 ArrayList**.
+    - [x] Fazer o relatório
 
 ## S05E01 - Lógica
 - Goal
