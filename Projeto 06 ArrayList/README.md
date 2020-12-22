@@ -20,6 +20,10 @@
         - Adiciona a criança do começo da fila no pula pula.
     - `out`
         - Remove a criança do pula pula e adiciona-o novamente na ultima posição da fila de espera. 
+
+    - `remove "nomeCriança"` - Remove a criança que está no pula pula ou na fila de espera. 
+
+
     - `show`
         - Mostra os dados do pula pula, nele mostram as crianças que estão em fila e as crianças que estão brincando.
     - `end`

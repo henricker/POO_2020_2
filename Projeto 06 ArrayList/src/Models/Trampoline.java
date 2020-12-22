@@ -41,6 +41,27 @@ public class Trampoline {
         this.kidsWaiting.add(0, lastKid);
     }
 
+    public boolean removeKid(String kid) {
+
+        //First, check if the kid exists in waiting queue
+        for(Kid obj : kidsWaiting) {
+            if(obj.getName().equals(kid)){
+                kidsWaiting.remove(obj);
+                return true;
+            }
+        }
+
+        //After check if the kid exists in queue playing
+        for(Kid obj: kidsPlaying) {
+            if(obj.getName().equals(kid)){
+                kidsPlaying.remove(obj);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public String toString() {
         String data = "";
         for(Kid obj : this.kidsWaiting) {

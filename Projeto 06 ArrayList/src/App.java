@@ -17,12 +17,18 @@ public class App {
                 trampoline.in();
             else if(arrayLine[0].equals("out"))
                 trampoline.out();
+            else if(arrayLine[0].equals("remove")) {
+                if(trampoline.removeKid(arrayLine[1]))
+                    System.out.println(arrayLine[1] + ", O papai chegou!");
+                else
+                    System.out.println("Fail: Não existe uma criança com o nome " + arrayLine[1]);
+            }
             else if(arrayLine[0].equals("show"))
                 System.out.println(trampoline);
             else if(arrayLine[0].equals("end"))
                 break;
             else
-                System.out.println("Comando inválido!");
+                System.out.println("Fail: Comando inválido!");
 
         }
 
