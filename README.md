@@ -120,7 +120,7 @@
         - Mínimo de 2 classes, construtores, toStrings.
         - Manipulação de objetos no vetor: inserção, remoção, busca.
         - Deve existir uma relação de Agregação (uma classe conter a outra) e manipulação do objeto.
-    - [ ] Colocar seus códigos na pasta **Projeto 06 ArrayList** e fazer o relatório
+    - [x] Colocar seus códigos na pasta **Projeto 06 ArrayList** e fazer o relatório
 
 ## S05E02 - Null
 - Goal
