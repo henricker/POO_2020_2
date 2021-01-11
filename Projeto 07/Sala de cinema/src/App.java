@@ -76,6 +76,11 @@ public class App {
                     );
                 }
             }
+
+            else if(line[0].equals("out"))
+                break;
+            else
+                JOptionPane.showMessageDialog(null, "fail: operation invalid", "Error!", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
