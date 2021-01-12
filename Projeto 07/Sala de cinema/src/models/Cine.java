@@ -49,7 +49,7 @@ public class Cine {
             }
         }
 
-        clients.add(index, new Client(name, phone));
+        clients.set(index, new Client(name, phone));
 
     }
 
