@@ -1,4 +1,3 @@
-## Projeto 'sala de cinema'
 ## Projeto TOPIC
 
 1. O que fez?
