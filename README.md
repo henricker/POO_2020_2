@@ -4,7 +4,6 @@
 
 ## Índice []()
 <!--TOC_BEGIN-->
-- [Links](#links)
 - [S01 - Atividades](#s01---atividades)
     - [S01E01 - Negociações](#s01e01---negociações)
     - [S01E02 - Git](#s01e02---git)
@@ -20,14 +19,6 @@
 - [S07E01 - Sort](#s07e01---sort)
 
 <!--TOC_END-->
-
-## Links
-- [Planilha de notas](https://docs.google.com/spreadsheets/d/1zGr9wJ0VifwyXHBXBtogrm6DLyuSKPyva8H2gFGv5Tk/edit?usp=sharing)
-- [Grupo do Discord](discord.gg/Ct67jn2EX7)
-- [Pasta com as aulas gravadas](https://drive.google.com/drive/folders/1tKLx3fg9loIZq3-4fbHbTrpUsQ2Xcnp_?usp=sharing)
-- [Apostila Caelum](https://www.caelum.com.br/apostila-java-orientacao-objetos/)
-- [Playlist Java Gafanhoto](https://www.youtube.com/playlist?list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY)
-
 
 ## S01 - Atividades
 - Leitura
