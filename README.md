@@ -1,5 +1,34 @@
 # Aqui estarão dispostos todos os projetos realizados na disciplina de POO
 
+# Repositório da Disciplina de POO 2020.2
+
+## Índice []()
+<!--TOC_BEGIN-->
+- [Links](#links)
+- [S01 - Atividades](#s01---atividades)
+    - [S01E01 - Negociações](#s01e01---negociações)
+    - [S01E02 - Git](#s01e02---git)
+- [S02E01 - Java Inicio](#s02e01---java-inicio)
+- [S02E02 - Java Interativo - Mago](#s02e02---java-interativo---mago)
+- [S03E01 - Inseto](#s03e01---inseto)
+- [S03E02 - Cofre](#s03e02---cofre)
+- [S04E01 - Encapsulamento - Tamagotchi](#s04e01---encapsulamento---tamagotchi)
+- [S04E02 - ArrayList - Tripas](#s04e02---arraylist---tripas)
+- [S05E01 - ArrayList II](#s05e01---arraylist-ii)
+- [S05E02 - Manipular elementos entre lista](#s05e02---manipular-elementos-entre-lista)
+- [S06E01 - Vetores de Null](#s06e01---vetores-de-null)
+- [S07E01 - Sort](#s07e01---sort)
+
+<!--TOC_END-->
+
+## Links
+- [Planilha de notas](https://docs.google.com/spreadsheets/d/1zGr9wJ0VifwyXHBXBtogrm6DLyuSKPyva8H2gFGv5Tk/edit?usp=sharing)
+- [Grupo do Discord](discord.gg/Ct67jn2EX7)
+- [Pasta com as aulas gravadas](https://drive.google.com/drive/folders/1tKLx3fg9loIZq3-4fbHbTrpUsQ2Xcnp_?usp=sharing)
+- [Apostila Caelum](https://www.caelum.com.br/apostila-java-orientacao-objetos/)
+- [Playlist Java Gafanhoto](https://www.youtube.com/playlist?list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY)
+
+
 ## S01 - Atividades
 - Leitura
 - Atividades
@@ -112,47 +141,57 @@
     - Fazer projeto sobre Vetores: Sugestão `@014 Contato`
         - Colocar na pasta **Projeto 05 Contato** e fazer o relatório
 
-## S05E01 - Lógica
+## S05E01 - ArrayList II
 - Goal
-    - Treinar lógica de programação com o Projeto @007 Tarifas.
+    - Treinar manipulação de objetos em Listas com o `@014 Contato`
+
+## S05E02 - Manipular elementos entre lista
+- Goal
+    - Treinar lógica de programação com o Projeto @009 Pula Pula.
 - Home
-    - Fazer projeto sobre Vetores: `@009 Pula Pula` ou equivalente.
+    - Sugestão `Projeto Tarifas` ou `Projeto JunkFood`.
         - Mínimo de 2 classes, construtores, toStrings.
         - Manipulação de objetos no vetor: inserção, remoção, busca.
-        - Deve existir uma relação de Agregação (uma classe conter a outra) e manipulação do objeto.
+        - Deve existir uma relação de Agregação ou Composição(uma classe conter pelo menos um Array da outra).
     - [x] Colocar seus códigos na pasta **Projeto 06 ArrayList** e fazer o relatório
 
-## S05E02 - Null
+## S06E01 - Vetores de Null
 - Goal
     - Entender melhor Vetores e Null com o Projeto `@010 Sala de Cinema`.
-- Home
-    - `@011 JunkFood`
-    - `@012 Topic` 
 
-## S06E01 - Revisão
+## S06E02 - Vetores de Null
 - Goal
-    - Revisão recriando o projeto Junkfood e Topic
+    - Continuação do projeto Cinema
+- Home
+    - [x] `@012 Topic` 
 
-## S06E02 - Sort
+## S07E01 - Sort
 - Goal
     - Ordenação, Equals, Comparable, Comparator e Sort.
+    - Comparação usando dois critérios
+    - indexOf do ArrayList usando o equals(Object) na classe Pessoa
+        - instanceOf e cast
+    - indexOf do ArrayList utilizando uma classe Chave
 - Home
-    - `@015 Busca` ou `@024 Mensagens`
+    - [x] `@015 Busca` ou `@024 Mensagens`
 
-## S07E01 - Maps
+<!--
+## S07E01 - Maps []()
 - Goal
     - Aprender como utilizar estruturas chave valor como Maps.
 
-## S07E02 - Integridade
+## S07E02 - Integridade []()
 - Goal
     - Entender a importância e o problema das redundâncias na integridade.
     - Projeto `@016 Favoritos`
 
-## S08 - Excessões
+## S08 - Excessões []()
 - Goal
 
-## S09 - Herança
+## S09 - Herança []()
 
-## S10 - Herança II
+## S10 - Herança II []()
 
-## S11 - NxN
+## S11 - NxN  []()
+
+-->
