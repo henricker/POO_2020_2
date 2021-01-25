@@ -104,7 +104,7 @@ public class Moneylender {
         for(Client client : this.dictClients.values())
             data += "- " + client.toString() + "\n";
 
-        return data;
+        return data += "\n";
     }
 
     public String transactionInfo() {
@@ -113,6 +113,7 @@ public class Moneylender {
         for(Transaction transaction : this.dictTransactions.values())
             data += "- " + transaction.toString() + "\n";
 
+        data += "\nbalance: " + this.balance + "\n";
         return data;
     }
 }
