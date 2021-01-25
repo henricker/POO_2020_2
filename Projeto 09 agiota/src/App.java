@@ -8,6 +8,15 @@ import javax.swing.JOptionPane;
 
 public class App {
 
+    public static void showMessage(String message) {
+        Pattern pattern = Pattern.compile("Sucess message");
+        Matcher matcher = pattern.matcher(message);
+
+        if(matcher.find())
+            JOptionPane.showMessageDialog(null, message, "Sucess message", 1);
+        else
+            JOptionPane.showMessageDialog(null, message, "Error message", 0);
+    }
     public static void main(String[] args) throws Exception {
         Moneylender agiota = null;
         while(true) {
@@ -45,13 +54,7 @@ public class App {
 
                 try {
                     String message = agiota.addCli(line[1], Double.parseDouble(line[2]));
-                    Pattern pattern = Pattern.compile("Sucess message");
-                    Matcher matcher = pattern.matcher(message);
-
-                    if(matcher.find())
-                        JOptionPane.showMessageDialog(null, message, "Sucess message", 1);
-                    else
-                        JOptionPane.showMessageDialog(null, message, "Error message", 0);
+                    showMessage(message);
 
                 }catch(NumberFormatException err) {
                     JOptionPane.showMessageDialog(null, "Error message: Invalid number!", "Error message", 0);
@@ -69,13 +72,7 @@ public class App {
 
                 try {
                     String message = agiota.lend(line[1], Double.parseDouble(line[2]));
-                    Pattern pattern = Pattern.compile("Sucess message");
-                    Matcher matcher = pattern.matcher(message);
-
-                    if(matcher.find())
-                        JOptionPane.showMessageDialog(null, message, "Sucess message", 1);
-                    else
-                        JOptionPane.showMessageDialog(null, message, "Error message", 0);
+                    showMessage(message);
 
                 }catch (NumberFormatException err) {
                     JOptionPane.showMessageDialog(null, "Error message: Invalid number!", "Error message", 0);
@@ -93,14 +90,10 @@ public class App {
                 }
 
                 try {
-                    String message = agiota.receive(line[1], Double.parseDouble(line[2]));
-                    Pattern pattern = Pattern.compile("Sucess message");
-                    Matcher matcher = pattern.matcher(message);
 
-                    if(matcher.find())
-                        JOptionPane.showMessageDialog(null, message, "Sucess message", 1);
-                    else
-                        JOptionPane.showMessageDialog(null, message, "Error message", 0);
+                    String message = agiota.receive(line[1], Double.parseDouble(line[2]));
+                    showMessage(message);
+
                 }catch (NumberFormatException err) {
                     JOptionPane.showMessageDialog(null, "Error message: Invalid number!", "Error message", 0);
                 }catch(ArrayIndexOutOfBoundsException err) {
@@ -117,12 +110,7 @@ public class App {
                 try {
                     
                     String message = agiota.kill(line[1]);
-                    Pattern pattern = Pattern.compile("Sucess message");
-                    Matcher matcher = pattern.matcher(message);
-                    if(matcher.find())
-                        JOptionPane.showMessageDialog(null, message, "Sucess message", 1);
-                    else
-                        JOptionPane.showMessageDialog(null, message, "Error message", 0);
+                    showMessage(message);
 
                 }catch (NumberFormatException err) {
                     JOptionPane.showMessageDialog(null, "Error message: Invalid number!", "Error message", 0);
