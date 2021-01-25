@@ -17,6 +17,7 @@ public class App {
         else
             JOptionPane.showMessageDialog(null, message, "Error message", 0);
     }
+
     public static void main(String[] args) throws Exception {
         Moneylender agiota = null;
         while(true) {
@@ -36,8 +37,10 @@ public class App {
             
             else if(line[0].equals("init")) {
                 try {
+                    
                     agiota = new Moneylender(Double.parseDouble(line[1]));
                     JOptionPane.showMessageDialog(null, "Sucess message: agiota init with sucessfully!", "Sucess message", 1);
+                
                 }catch(NumberFormatException err) {
                     JOptionPane.showMessageDialog(null, "Error message: invalid number!", "Error message", 0);
                 }catch(ArrayIndexOutOfBoundsException err) {
@@ -53,6 +56,7 @@ public class App {
                 }
 
                 try {
+                    
                     String message = agiota.addCli(line[1], Double.parseDouble(line[2]));
                     showMessage(message);
 
@@ -71,6 +75,7 @@ public class App {
                 }
 
                 try {
+                    
                     String message = agiota.lend(line[1], Double.parseDouble(line[2]));
                     showMessage(message);
 
