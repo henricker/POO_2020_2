@@ -6,11 +6,13 @@ import java.util.Map.Entry;
 
 public class Moneylender {
     private double balance;
+    private double interest;
     private TreeMap<String, Client> dictClients;
     private TreeMap<Integer, Transaction> dictTransactions;
 
-    public Moneylender(double balance) {
+    public Moneylender(double balance, double interest) {
         this.balance = balance;
+        this.interest = interest;
         dictClients = new TreeMap<String, Client>();
         dictTransactions = new TreeMap<Integer, Transaction>();
     }
@@ -50,7 +52,7 @@ public class Moneylender {
 
         // Case succes
         Transaction transaction = new Transaction(codename, value);
-        this.dictClients.get(codename).receiveTransaction(value);
+        this.dictClients.get(codename).receiveTransaction(this.interestCalc(value));
         this.dictTransactions.put(transaction.getId(), transaction);
         this.balance -= value;
 
@@ -96,6 +98,10 @@ public class Moneylender {
             this.dictTransactions.remove(key);
         
         return response;
+    }
+
+    public double interestCalc(double value) {
+        return value * (1 + this.interest/100);
     }
 
     public String clientsInfo() {

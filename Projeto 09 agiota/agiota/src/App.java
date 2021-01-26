@@ -23,7 +23,7 @@ public class App {
         while(true) {
             String[] line = JOptionPane.showInputDialog(null, 
                                 "Choose an option: \n" + 
-                                " - init {money_initial} \n" +
+                                " - init {money_initial} {percent_interest}\n" +
                                 " - addCli {name} {limit} \n" +
                                 " - lend {name} {value}\n" +
                                 " - receive {name} {value}\n" +
@@ -38,7 +38,7 @@ public class App {
             else if(line[0].equals("init")) {
                 try {
                     
-                    agiota = new Moneylender(Double.parseDouble(line[1]));
+                    agiota = new Moneylender(Double.parseDouble(line[1]), Double.parseDouble(line[2]));
                     JOptionPane.showMessageDialog(null, "Sucess message: agiota init with sucessfully!", "Sucess message", 1);
                 
                 }catch(NumberFormatException err) {
