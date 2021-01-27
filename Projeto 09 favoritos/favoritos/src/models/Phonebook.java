@@ -42,6 +42,14 @@ public class Phonebook {
         return true;
     }
 
+    public boolean rmPhone(String name, int index) {
+        if(!this.contacts.containsKey(name))
+            return false;
+        
+        boolean solve = this.contacts.get(name).rmPhone(index); 
+        return solve;
+    }
+    
     public ArrayList<Contact> getContacts() { 
         ArrayList<Contact> solver = new ArrayList<Contact>();
         for(Contact contact : this.contacts.values())

@@ -19,7 +19,7 @@ public class Contact {
             return "Error message: Invalid number phone\n";
         
         phones.add(new Phone(label, number));
-        return "Sucess message: Number added with sucessfully!\n";
+        return "Success message: Number added with Successfully!\n";
     }
 
     public String addPhone(ArrayList<Phone> phones) {
@@ -44,7 +44,7 @@ public class Contact {
             return data.toString();
         }
 
-        return "Sucess message: All numbers were added with sucess!\n";
+        return "Success message: All numbers were added with Success!\n";
     }
 
     public boolean rmPhone(int index) {
