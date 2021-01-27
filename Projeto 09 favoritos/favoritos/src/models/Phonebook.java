@@ -38,6 +38,7 @@ public class Phonebook {
         if(!this.contacts.containsKey(name))
             return false;
         
+        this.contacts.remove(name);
         this.bookMarks.remove(name);
         return true;
     }
