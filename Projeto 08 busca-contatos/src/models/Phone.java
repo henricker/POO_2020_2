@@ -19,7 +19,7 @@ public class Phone {
 
     // Static method
     public static boolean isPhoneNumber(String number) {
-        Pattern pattern = Pattern.compile("[0-9]+");
+        Pattern pattern = Pattern.compile("^[0-9]+$");
         Matcher matcher = pattern.matcher(number);
 
         if(matcher.matches())
