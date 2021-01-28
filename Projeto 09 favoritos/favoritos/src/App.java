@@ -158,6 +158,10 @@ public class App {
                     App.showMessage("Error message: Many arguments passed!");
                 }
             }
+
+            else {
+                showMessage("Error message: invalid comand!");
+            }
         }
     }
 }
