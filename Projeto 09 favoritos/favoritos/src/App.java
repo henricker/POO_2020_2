@@ -160,7 +160,7 @@ public class App {
             }
 
             else {
-                showMessage("Error message: invalid comand!");
+                App.showMessage("Error message: invalid comand!");
             }
         }
     }
