@@ -164,7 +164,6 @@
         - instanceOf e cast
     - indexOf do ArrayList utilizando uma classe Chave
 - Home
-    
     - [x] `@015 Busca` ou `@024 Mensagens`
 
 ## S08E01 - Mapas
@@ -176,7 +175,7 @@
 - Goal
     - Entender como funcionam os mapas na prática.
 - Home
-    -[x] `@016 Favoritos`
+    - [x] `@016 Favoritos`
 <!--
 ## S07E01 - Maps []()
 - Goal
