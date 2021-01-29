@@ -166,6 +166,16 @@
 - Home
     - [x] `@015 Busca` ou `@024 Mensagens`
 
+## S08E01 - Mapas
+- Goal
+    - Entender como funcionam as estruturas lineares como Lista e as estruturas não lineares como Set e Map.
+    - Ver os métodos de funcionamento do TreeMap para inserir, buscar, remover, percorrer.
+
+## S08E02 - Agiota
+- Goal
+    - Entender como funcionam os mapas na prática.
+- Home
+    -[x] `@016 Favoritos`
 <!--
 ## S07E01 - Maps []()
 - Goal
