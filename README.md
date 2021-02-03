@@ -185,8 +185,8 @@
 - Goal
     - Compreender o funcionamento de interfaces e herança no polimorfismo.
 - Home
-    - Obrigatório
-        -[x] Implementar um projeto à usa escolha que contenha:
+    -[x] Obrigatório
+        - Implementar um projeto à usa escolha que contenha:
             - Uso de interfaces
             - Uso de herança
             - Sobrescrita de método
