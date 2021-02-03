@@ -176,18 +176,27 @@
     - Entender como funcionam os mapas na prática.
 - Home
     - [x] `@016 Favoritos`
+
+## S09E01 - Excessões
+- Goal
+    - Entender como funcionam excessões e como utilizá-las para gerenciar erros
+
+## S09E02 - Polimorfismo
+- Goal
+    - Compreender o funcionamento de interfaces e herança no polimorfismo.
+- Home
+    - Obrigatório
+        -[x] Implementar um projeto à usa escolha que contenha:
+            - Uso de interfaces
+            - Uso de herança
+            - Sobrescrita de método
+            - Invocação de construtores em cadeia
+            - Uso de excessões para lançar erros
+        - Treine, teste, use sua imaginação para brincar com os conteúdos.
+    - Opcional
+        - `@028 Bilheteria`
 <!--
-## S07E01 - Maps []()
-- Goal
-    - Aprender como utilizar estruturas chave valor como Maps.
 
-## S07E02 - Integridade []()
-- Goal
-    - Entender a importância e o problema das redundâncias na integridade.
-    - Projeto `@016 Favoritos`
-
-## S08 - Excessões []()
-- Goal
 
 ## S09 - Herança []()
 
