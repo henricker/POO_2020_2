@@ -184,8 +184,8 @@
 ## S09E02 - Polimorfismo
 - Goal
     - Compreender o funcionamento de interfaces e herança no polimorfismo.
-- Home
-    -[x] Obrigatório
+- [x] Home
+    - Obrigatório
         - Implementar um projeto à usa escolha que contenha:
             - Uso de interfaces
             - Uso de herança
