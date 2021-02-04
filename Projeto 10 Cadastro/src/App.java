@@ -11,8 +11,8 @@ import models.AccountController;
 
 public class App {
 
-    public static void showMessage(String message, boolean sucess) {
-        if(sucess) {
+    public static void showMessage(String message, boolean success) {
+        if(success) {
             JOptionPane.showMessageDialog(null, message, "Sucess message", 1);
         }else {
             JOptionPane.showMessageDialog(null, message, "Error message", 0);
