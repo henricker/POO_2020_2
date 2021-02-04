@@ -9,7 +9,7 @@
 3. Como foi feito?
     
     - Utilizei os conhecimentos sobre herança e polimorfismo, além do tratamento de erros e exceções personalizados que foram vistos em sala e com apoio da apostila Caelum.
-    - O projeto possui tanto os modelos que de fato fazem toda a lógica do projeto dispostos na pasta [models](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2010%20Cadastro/src/models) quanto os que personalizei para o tratamento de exceções na pasta [exceptions](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2010%20Cadastro/src/exceptions)
+    - O projeto possui tanto os modelos que de fato fazem toda a lógica do projeto dispostos na pasta [models](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2010%20Cadastro/src/models) quanto os que personalizei para o tratamento de excessões na pasta [exceptions](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2010%20Cadastro/src/exceptions)
 
     - Busquei, em cada classe e método, fazer apenas aquilo que ela é disposta a fazer e evitando ter ambiguidade no meu código.
 
