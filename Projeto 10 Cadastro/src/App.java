@@ -28,7 +28,7 @@ public class App {
                                         "- addCli {name}\n" +
                                         "- deposit {id_account} {value}\n" +
                                         "- withdraw {id_account} {value}\n" +
-                                        "- transfer {from_id} {to_id}\n" +
+                                        "- transfer {from_id} {to_id} {value}\n" +
                                         "- update\n" +
                                         "- show\n" +
                                         "- end"

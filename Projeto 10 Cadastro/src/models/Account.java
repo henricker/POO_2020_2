@@ -2,7 +2,7 @@ package models;
 
 import exceptions.InvalidValueError;
 
-abstract class Account {
+abstract class Account implements InterfaceAccount{
     private static int id_base = 0;
     protected int id;
     protected float balance;
