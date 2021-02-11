@@ -61,7 +61,7 @@ public class ViewInit {
         if(error)
             JOptionPane.showMessageDialog(null, message, "Error", 0);
         else
-            JOptionPane.showMessageDialog(null, message, "Sucess", 1);
+            JOptionPane.showMessageDialog(null, message, "Success", 1);
     }
 
     public void init() throws UserAlredyExistsException, UserNotFoundException {
