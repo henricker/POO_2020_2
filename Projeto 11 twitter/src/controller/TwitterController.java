@@ -27,65 +27,44 @@ public class TwitterController {
         this.users.add(newUser);
     }
 
-    public void addTweet(String username, String message) throws UserNotFoundException {
-        User user = this.getUserByName(username);
-
-        if(user == null)
-            throw new UserNotFoundException("User not found!");
-        
+    public void addTweet(User user, String message) {
+        // Toda autenticação se o usuário existe já foi feita durante o login
         user.writeTweet(tweetGenerator.create(user, message));
     }
 
-    public void follow(String username, String other) throws UserNotFoundException {
-        User user = this.getUserByName(username);
-        User user2 = this.getUserByName(other);
+    public void follow(User user, String other) throws UserNotFoundException {
+        User otherUser = this.getUserByName(other);
         
-        if(user == null || user2 == null)
+        if(otherUser == null)
             throw new UserNotFoundException("User not found!");
         
-        user.follow(user2);        
+        user.follow(otherUser);      
     }
 
-    public void unfollow(String username, String other) throws UserNotFoundException{
-        User user = this.getUserByName(username);
-        User user2 = this.getUserByName(other);
+    public void unfollow(User user, String other) throws UserNotFoundException{
+        User otherUser = this.getUserByName(other);
         
-        if(user == null || user2 == null)
+        if(otherUser == null)
             throw new UserNotFoundException("User not found!");
         
-        user.unfollow(user2);
+        user.unfollow(otherUser);
     }
 
-    public void likeTweet(String username, int index) throws UserNotFoundException {
-        User user = this.getUserByName(username);
-
-        if(user == null)
-            throw new UserNotFoundException("User not found!");
-        
+    public void likeTweet(User user, int index) throws IndexOutOfBoundsException{
         if(index < 0 || index >= this.tweets.size())
             throw new IndexOutOfBoundsException("Invalid id!");
         
         user.likeTweet(index);
     }
 
-    public void unlike(String username, int index) throws UserNotFoundException {
-        User user = this.getUserByName(username);
-
-        if(user == null)
-            throw new UserNotFoundException("User not found!");
-        
+    public void unlike(User user, int index) throws IndexOutOfBoundsException {
         if(index < 0 || index >= this.tweets.size())
             throw new IndexOutOfBoundsException("Invalid id!");
         
         user.unlikeTweet(index);
     }
 
-    public String unread(String username) throws UserNotFoundException {
-        User user = this.getUserByName(username);
-
-        if(user == null)
-            throw new UserNotFoundException("User not found!");
-        
+    public String unread(User user) {
         StringBuilder data = new StringBuilder();
 
         ArrayList<Tweet> unreadTweets = user.getUnread();
@@ -95,12 +74,7 @@ public class TwitterController {
         return data.toString();
     }
 
-    public String timeline(String username) throws UserNotFoundException {
-        User user = this.getUserByName(username);
-
-        if(user == null)
-            throw new UserNotFoundException("User not found!");
-        
+    public String timeline(User user) {        
         StringBuilder data = new StringBuilder();
 
         ArrayList<Tweet> timelineTweets = user.getTimeline();
@@ -126,7 +100,7 @@ public class TwitterController {
         return data.toString();
     }
 
-    private User getUserByName(String username) {
+    public User getUserByName(String username) {
         for(int i = 0; i < users.size(); i++)
             if(this.users.get(i).toString().equals(username))
                 return this.users.get(i);
