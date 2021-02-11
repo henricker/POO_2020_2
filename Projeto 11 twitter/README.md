@@ -18,7 +18,7 @@
     - Em alguns métodos do controller e dos modelos não possui validações pois para que o usuário realize as operações ele deve passar pela autenticação (login) passando seu usuário.
     
 4. O que aprendeu?
-    - Nada que se deva ser mensionado, mas foi bem divertido implementar.
+    - Nada que se deva ser mencionado, mas foi bem divertido implementar.
     - Auxiliou na minha lógica.
 5. Quanto tempo demorou?
     - Cerca de uma hora e meia (90 min)
