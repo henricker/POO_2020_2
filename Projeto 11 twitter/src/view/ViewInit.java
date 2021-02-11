@@ -54,6 +54,9 @@ public class ViewInit {
             else if(line[0].equals("Show:")) {
                 ViewInit.showMessage(false, twitter.show());
             }
+
+            else
+                ViewInit.showMessage(true, "Invalid command!");
         }
     }
 

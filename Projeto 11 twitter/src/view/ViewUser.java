@@ -101,6 +101,9 @@ class ViewUser {
             else if(line[0].equals("Logout")) {
                 return;
             }
+
+            else
+                ViewInit.showMessage(true, "Invalid command!");
         }
     }
 
