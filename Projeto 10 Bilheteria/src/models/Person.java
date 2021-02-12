@@ -12,4 +12,10 @@ public class Person {
     //all getters
     public String getName() { return this.name; }
     public boolean getHalf() { return this.half; }
+
+    @Override 
+    public String toString() {
+        String type = this.half ? "half" : "full";
+        return "[ " + this.name + " | " + type + " ]";
+    }
 }

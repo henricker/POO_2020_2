@@ -26,7 +26,7 @@ public class Sector {
 
     public void saled(Person client) throws LimitOverflowException {
         if(this.quantity + 1 > this.capacity)
-            throw new LimitOverflowException("Sector already full capacity");
+            throw new LimitOverflowException( this.name + " sector already had max capacity");
         this.quantity++;
 
         this.clients.put(client.getName(), client);
@@ -41,6 +41,6 @@ public class Sector {
 
     @Override
     public String toString() {
-        return "[ " + this.name + ":" + this.price + ":" + this.quantity + ":" + this.capacity + " ]";
+        return "[ " + this.name + "|" + this.price + "|" + this.quantity + ":" + this.capacity + " ]";
     }
 }

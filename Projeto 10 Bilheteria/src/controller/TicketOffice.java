@@ -22,14 +22,14 @@ public class TicketOffice {
     private ArrayList<Sale> salesRepository;
     private HashMap<String, Person> clientRepository;
     private HashMap<String, Event> eventsRepository;
-    private HashMap<String, Sector> sectorsRepository;
+    private ArrayList<Sector> sectorsRepository;
     private double checkout;
 
     public TicketOffice() {
         this.salesRepository = new ArrayList<Sale>();
         this.clientRepository = new HashMap<String, Person>();
         this.eventsRepository = new HashMap<String, Event>();
-        this.sectorsRepository = new HashMap<String, Sector>();
+        this.sectorsRepository = new ArrayList<Sector>();
         this.checkout = 0;
     }
 
@@ -37,16 +37,21 @@ public class TicketOffice {
             throws ClientNotFound, SectorNotFound, EventNotFound, LimitOverflowException {
         
         Person searchClient = this.clientRepository.get(client);
-        Sector searchSector = this.sectorsRepository.get(sector);
         Event searchEvent = this.eventsRepository.get(event);
+        
 
         if(searchClient == null)
-            throw new ClientNotFound("Client not found!");
-        if(searchSector == null)
-            throw new SectorNotFound("Sector not found!");
+            throw new ClientNotFound(client + " client not found!");
         if(searchEvent == null)
-            throw new EventNotFound("Event not found!");
+            throw new EventNotFound(event + " event not found!");
+
+        Sector searchSector = searchEvent.getSectors().get(sector);
         
+        if(searchSector == null)
+            throw new SectorNotFound(sector + " sector not found!");
+        
+        
+        searchSector.saled(searchClient);
         if(searchClient.getHalf()){
             this.salesRepository.add(new Sale(searchClient, searchSector, searchEvent, searchSector.getPrice()/2));
             this.checkout += DoubleTwoDecimal.doubleToDecimal(searchSector.getPrice()/2);
@@ -55,7 +60,6 @@ public class TicketOffice {
 
         this.salesRepository.add(new Sale(searchClient, searchSector, searchEvent, searchSector.getPrice()));
         this.checkout += searchSector.getPrice();
-        searchSector.saled(searchClient);
     }
 
     public void addClient(String name, boolean half) throws ClientAlreadyExist {
@@ -67,7 +71,7 @@ public class TicketOffice {
 
     public void addEvent(String name) throws EventAlreadyExists {
         if(this.eventsRepository.containsKey(name))
-            throw new EventAlreadyExists(name + " already exists!");
+            throw new EventAlreadyExists(name + " event already exists!");
         
         this.eventsRepository.put(name, new Event(name));
     }
@@ -75,35 +79,25 @@ public class TicketOffice {
     public void addSector(String name, String event, double price, int capacity) throws SectorAlreadyExists,
             EventNotFound, NumberErrorException {
         
-        if(this.sectorsRepository.containsKey(name))
-            throw new SectorAlreadyExists(name + " already exists!");
-        
         Event searchEvent = this.eventsRepository.get(event);
 
         if(searchEvent == null)
-            throw new EventNotFound("Event not found!");
-
+            throw new EventNotFound(event + " event not found!");
         if(capacity <= 0)
             throw new NumberErrorException("Capacity can't be negative!");
         if(price <= 0)
             throw new NumberErrorException("price can't be negative!");
         
-        this.sectorsRepository.put(name, new Sector(name, searchEvent, price, capacity));
+        Sector newSector = new Sector(name, searchEvent, price, capacity);
+        searchEvent.addSector(newSector);
+        this.sectorsRepository.add(newSector);
     }
 
     public String showClients() {
         StringBuilder sb = new StringBuilder();
 
-        this.eventsRepository.values().forEach(event -> {
-            sb.append(event.getName() + ":\n");
-            event.getSectors().values().forEach(sector -> {
-                sb.append("  " + sector.getName() + ":\n");
-                sb.append("    [ ");
-                sector.getClients().values().forEach(client -> {
-                    sb.append(client.getName() + " ");
-                });
-                sb.append("]\n");
-            });
+        this.clientRepository.values().forEach(client -> {
+            sb.append(client + "\n");
         });
 
         return sb.toString();
@@ -128,7 +122,7 @@ public class TicketOffice {
         this.salesRepository.forEach(sale -> {
             sb.append(sale + "\n");
         });
-
+        sb.append("R$ " + this.checkout + "\n");
         return sb.toString();
     }
 }
