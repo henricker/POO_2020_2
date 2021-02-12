@@ -121,4 +121,14 @@ public class TicketOffice {
 
         return sb.toString();
     }
+
+    public String showSales() {
+        StringBuilder sb = new StringBuilder();
+        
+        this.salesRepository.forEach(sale -> {
+            sb.append(sale + "\n");
+        });
+
+        return sb.toString();
+    }
 }

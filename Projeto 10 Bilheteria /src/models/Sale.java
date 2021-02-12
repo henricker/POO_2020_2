@@ -20,4 +20,9 @@ public class Sale {
     public Sector getSector() { return this.sector; }
     public Event getEvent() { return this.event; }
     public double getValue() { return this.value; }
+
+    @Override
+    public String toString() {
+        return "[ " + this.client.getName() + " " + this.event.getName() + " " + this.sector.getName() + " ]";
+    }
 }
