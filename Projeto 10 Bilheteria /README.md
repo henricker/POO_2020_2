@@ -1,14 +1,22 @@
-## Getting Started
+## Projeto Bilheteria - Relatório
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. O que fez?
+    - Fiz o [projeto bilheteria](https://github.com/qxcodepoo/arcade/tree/master/base/028)
 
-## Folder Structure
+2. Com quem fez?
+    - Sozinho, com ajuda de alguns fóruns na web
 
-The workspace contains two folders by default, where:
+3. Como fez?
+    - O projeto constitui dos modelos `Event`, `Person`, `Sale`, e `Sector` são eles que representam o sistema. Eles se encontram na pasta `models`
+    - Possui um controller `TicketOffice` que é o modelo da bilheteria de fato, é nela onde há o controle de todas as demais classes. Ela se encontra na pasta `controller`
+    - Como visto em aula, utilizei e abusei da criação de objetos de exceções, eles estão na pasta `exceptions`.
+    - Também crei um modelo que serve apenas para converter valores double em apenas duas casas decimais, ele se encontra na pasta `util`.
+    - Continuo utilizando o JOptionPane para uma melhor interação com o usuário, do qual dispõe de um modelo chamado `view` que é o responsável unicamente para isso.
+    - Em todos os modelos, busquei o "equilíbrio perfeito" ( mesmo que não esteja kkkkkk). Em cada classe há apenas aquilo que ela pode fazer, nada de mais nem de menos.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+4. O que aprendeu?
+    - Durante a aula, aprendi a como utilizar a sintaxe de exceções, que é a mesma de JavaScript e python. E acabei pesquisando sobre como criar meus próprios modelos de exceções.
+    - Auxiliou no desenvolvimento da minha lógica.
 
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+5. Demorou quanto tempo?
+    - Cerca de 90 min.
