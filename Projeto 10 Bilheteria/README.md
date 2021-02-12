@@ -10,8 +10,8 @@
     - O projeto constitui dos modelos `Event`, `Person`, `Sale`, e `Sector` são eles que representam o sistema. Eles se encontram na pasta `models`
     - Possui um controller `TicketOffice` que é o modelo da bilheteria de fato, é nela onde há o controle de todas as demais classes. Ela se encontra na pasta `controller`
     - Como visto em aula, utilizei e abusei da criação de objetos de exceções, eles estão na pasta `exceptions`.
-    - Também crei um modelo que serve apenas para converter valores double em apenas duas casas decimais, ele se encontra na pasta `util`.
-    - Continuo utilizando o JOptionPane para uma melhor interação com o usuário, do qual dispõe de um modelo chamado `view` que é o responsável unicamente para isso.
+    - Também crei um modelo que serve apenas para converter valores double em apenas duas casas decimais, ele se encontra na pasta `util`. Além de um controller para enviar as mensagens e receber o input do usuário com o JOptionPane.
+    - Utilizo uma classe específica chamada `View` para controlar a interação com o usuário. Se encontra na pasta `view`
     - Em todos os modelos, busquei o "equilíbrio perfeito" ( mesmo que não esteja kkkkkk). Em cada classe há apenas aquilo que ela pode fazer, nada de mais nem de menos.
 
 4. O que aprendeu?
