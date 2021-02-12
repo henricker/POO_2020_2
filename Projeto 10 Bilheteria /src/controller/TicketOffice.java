@@ -84,9 +84,9 @@ public class TicketOffice {
             throw new EventNotFound("Event not found!");
 
         if(capacity <= 0)
-            throw new NumberErrorException("Capacity cant be negative!");
+            throw new NumberErrorException("Capacity can't be negative!");
         if(price <= 0)
-            throw new NumberErrorException("price cant be negative!");
+            throw new NumberErrorException("price can't be negative!");
         
         this.sectorsRepository.put(name, new Sector(name, searchEvent, price, capacity));
     }
@@ -124,7 +124,7 @@ public class TicketOffice {
 
     public String showSales() {
         StringBuilder sb = new StringBuilder();
-        
+
         this.salesRepository.forEach(sale -> {
             sb.append(sale + "\n");
         });
