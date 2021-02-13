@@ -55,6 +55,9 @@ public class Chat {
     }
 
     public int getUnreadCount(String userId) throws ExceptionController {
+        if(!this.hasUser(userId))
+            throw new ExceptionController(this.chatId + " not contains " + userId + " user", "UserNotFound");
+        
         return this.users.get(userId).getNotifyChat(this.chatId).getUnreadCount();
     }
 
