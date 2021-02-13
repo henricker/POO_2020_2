@@ -6,7 +6,7 @@ public class Inbox {
     private User user;
     private ArrayList<Message> messages;
 
-    public Inbox(User user) {
+    Inbox(User user) {
         this.user = user;
         this.messages = new ArrayList<Message>();
     }

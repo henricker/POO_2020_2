@@ -32,12 +32,12 @@ public class User {
         return this.notify.get(chatId);
     }
 
-    public void addChat(String chatId) throws ExceptionController{
-        if(this.chats.containsKey(chatId))
-            throw new ExceptionController(this.userId + " alrady exists in " + chatId + " chat", "ChatAlreadyExists");
+    public void addChat(Chat chat) throws ExceptionController{
+        if(this.chats.containsKey(chat.getChatId()))
+            throw new ExceptionController(this.userId + " alrady exists in " + chat.getChatId() + "chat", "ChatAlreadyExists");
         
-        this.chats.put(chatId, new Chat(chatId));
-        this.notify.put(chatId, new Notify(chatId));
+        this.chats.put(chat.getChatId(), chat);
+        this.notify.put(chat.getChatId(), new Notify(chat.getChatId()));
     }
 
     public void addNotify(String chatId) throws ExceptionController {
@@ -47,15 +47,20 @@ public class User {
         this.notify.get(chatId).increment();
     }
 
-    public void removeChat(String chatId) throws ExceptionController {
-        if(!this.notify.containsKey(chatId))
-            throw new ExceptionController(this.userId + " already is not in " + chatId + " chat", "ChatNotFound");
+    public void removeChat(Chat chat) throws ExceptionController {
+        if(!this.notify.containsKey(chat.getChatId()))
+            throw new ExceptionController(this.userId + " already is not in " + chat.getChatId() + " chat", "ChatNotFound");
         
-        this.chats.remove(chatId);
-        this.notify.remove(chatId);
+        this.chats.remove(chat.getChatId());
+        this.notify.remove(chat.getChatId());
     }
 
     public String getUserId() {
         return this.userId;
+    }
+
+    @Override
+    public String toString() {
+        return "[ " + this.userId + " ]";
     }
 }

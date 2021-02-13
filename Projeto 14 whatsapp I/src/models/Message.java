@@ -6,7 +6,7 @@ public class Message {
     private String message;
   
 
-    public Message(String userId, String message) {
+    Message(String userId, String message) {
         this.userId = userId;
         this.message = message;
     }
