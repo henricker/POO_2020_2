@@ -95,4 +95,9 @@ public class Chat {
         return this.chatId;
     }
 
+    @Override
+    public String toString() {
+        return "[ " + this.chatId + " ]";
+    }
+
 }

@@ -110,12 +110,23 @@ public class WhatsappService {
         newUser.addChat(chat);
     }
 
-    public String getAllUser() {
+    public String getAllUsers() {
         StringBuilder sb = new StringBuilder();
         
         sb.append("All users:\n");
         this.users.values().forEach(user ->  {
             sb.append("    - " + user + "\n");
+        });
+
+        return sb.toString();
+    }
+
+    public String getAllChats() {
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("All chats:\n");
+        this.chats.values().forEach(chat ->  {
+            sb.append("    - " + chat + "\n");
         });
 
         return sb.toString();
