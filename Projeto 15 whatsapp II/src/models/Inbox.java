@@ -21,12 +21,14 @@ public class Inbox {
     }
 
     public ArrayList<Message> getAllMessages() {
-        return this.messages;
+        ArrayList<Message> messages = this.messages;
+        this.resetUnreadCount();
+        return messages;
     }
 
     public ArrayList<Message> getUnreadMessages() {
-        ArrayList<Message> messages = (ArrayList<Message>) this.messages
-                .subList(this.messages.size() - this.unreadCount, this.messages.size());
+        ArrayList<Message> messages = new ArrayList<Message> (this.messages
+                .subList(this.messages.size() - this.unreadCount, this.messages.size()));
         
         this.resetUnreadCount();
         return messages;

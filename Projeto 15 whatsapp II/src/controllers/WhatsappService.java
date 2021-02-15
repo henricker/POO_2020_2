@@ -33,7 +33,10 @@ public class WhatsappService {
         if(this.hasChat(chatId))
             throw new ExceptionController("Group already exists!", "GroupAlreadyExists");
         
-        this.chatsRepository.put(chatId, new Group(chatId));
+        Group group = new Group(chatId);
+        group.addUser(this.usersRepository.get(userId));
+        this.chatsRepository.put(chatId, group);
+        this.usersRepository.get(userId).getchats().put(chatId, group);
     }
 
     public void createChat(String userId, String invited) throws ExceptionController {
@@ -43,6 +46,8 @@ public class WhatsappService {
             throw new ExceptionController("User " + invited + " not exists!", "UserNotFound");
         if(this.hasChat(userId + "-" + invited) || this.hasChat(invited + "-" + userId))
             throw new ExceptionController("Chat already exists!", "ChatAlreadyExists");
+        if(userId.equals(invited))
+            throw new ExceptionController("Not accept intited yourself!", "InvitedYourSelf");
         
         User userGuess = this.usersRepository.get(userId);
         User userInvited = this.usersRepository.get(invited);
@@ -58,14 +63,20 @@ public class WhatsappService {
             throw new ExceptionController("User " + userId + " not exists!", "UserNotFound");
         if(!this.hasUser(invited))
             throw new ExceptionController("User " + invited + " not exists!", "UserNotFound");
-        if(!(this.hasChat(userId + "-" + invited) || this.hasChat(invited + "-" + userId)))
-            throw new ExceptionController( groupId + " not exists!", "GroupNotFound");
+        if(!(this.hasChat(groupId)))
+            throw new ExceptionController("Group " + groupId + " not exists!", "GroupNotFound");
         if(!(this.usersRepository.get(userId).getchats().containsKey(groupId)))
             throw new ExceptionController("User " + userId + " not exists in " + groupId, "UserNotFound");
         if(this.usersRepository.get(invited).getchats().containsKey(groupId))
             throw new ExceptionController("User " + invited + " already exists in " + groupId, "UserNotFound");
         
         User userInvited = this.usersRepository.get(invited);
+        
+        if(this.chatsRepository.get(groupId) instanceof Talk){
+            Talk talk = (Talk)this.chatsRepository.get(groupId);
+            talk.addUser(userInvited);
+        }
+
         Group group = (Group) this.chatsRepository.get(groupId);
         
         userInvited.getchats().put(group.getChatId(), group);
@@ -118,7 +129,7 @@ public class WhatsappService {
             sb.append("    - " + message + "\n");
         });
 
-        return messages.toString();
+        return sb.toString();
     }
 
     public String getChatMessage(String userId, String chatId) throws ExceptionController {
@@ -134,7 +145,7 @@ public class WhatsappService {
             sb.append("    - " + message + "\n");
         });
 
-        return messages.toString();
+        return sb.toString();
     }
 
     public void sendMessage(String userId, String chatId, String message) throws ExceptionController {
@@ -144,6 +155,17 @@ public class WhatsappService {
             throw new ExceptionController("Chat " + chatId + " not exists!", "ChatNotFound");
         
         this.chatsRepository.get(chatId).deliverZap(userId, message);
+    }
+
+    public String getNotifyUser(String userId) throws ExceptionController {
+        if(!this.hasUser(userId))
+            throw new ExceptionController("User " + userId + " not exists!", "UserNotFound");
+        
+        return this.usersRepository.get(userId).getNotify();
+    }
+
+    public TreeMap<String, Chat> getChats() {
+        return this.chatsRepository;
     }
 
     private boolean hasUser(String userId) {

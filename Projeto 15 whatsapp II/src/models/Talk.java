@@ -6,9 +6,9 @@ public class Talk extends Chat implements InterfaceAnyChat{
     
     public Talk(User user1, User user2) throws ExceptionController {
         super(
-            (user1.getUserId().compareTo(user2.getUserId()) == -1) ? user1.getUserId() + "-" + user2.getUserId() : user1.getUserId() + "-" + user1.getUserId()
+            (user1.getUserId().compareTo(user2.getUserId()) < 0) ? user1.getUserId() + "-" + user2.getUserId() : user2.getUserId() + "-" + user1.getUserId()
         );
-
+        System.out.println(user1.getUserId().compareTo(user2.getUserId()));
         this.addUserChat(user1);
         this.addUserChat(user2);
     }

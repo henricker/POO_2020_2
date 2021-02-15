@@ -21,8 +21,8 @@ public abstract class Chat {
         return this.inboxes.get(userId).getAllMessages();
     }
 
-    public String getInboxNotify(String userId) {
-        return this.inboxes.get(userId).toString();
+    public Inbox getInboxNotify(String userId) {
+        return this.inboxes.get(userId);
     }
 
     public boolean hasUser(String userId) {
