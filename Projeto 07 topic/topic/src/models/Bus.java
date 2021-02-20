@@ -5,6 +5,8 @@ import java.util.Collections;
 
 import javax.swing.JOptionPane;
 
+import Exceptions.ExceptionController;
+
 public class Bus {
     private ArrayList<Passenger> normalChairs;
     private ArrayList<Passenger> preferredChairs;
@@ -24,49 +26,34 @@ public class Bus {
         }
     }
 
-    public boolean in (Passenger person) { 
+    public void in (Passenger person) throws ExceptionController {
         int indexNormal = this.normalChairs.indexOf(null);
         int indexPreferred = this.preferredChairs.indexOf(null);
 
-        if(indexNormal == -1 && indexPreferred == -1) {
-            JOptionPane.showMessageDialog(
-                null, 
-                "Fail: Not vacant chairs!",
-                "Error!", 
-                0
-            );
-            return false;
-        }
+        if(indexNormal == -1 && indexPreferred == -1)
+            throw new ExceptionController("Error", "Not vacant chairs");
+        
 
         //Case old person and exists vacant preferred chairs
-        else if(person.getAge() >= Bus.minAgeToOldPassenger && indexPreferred != -1) {
+        else if(person.getAge() >= Bus.minAgeToOldPassenger && indexPreferred != -1)
             this.preferredChairs.set(indexPreferred, person);
-            return true;
-        }
         
         //Case old person and not exists vacant preferred chairs
-        else if(person.getAge() >= Bus.minAgeToOldPassenger && indexPreferred == -1 && indexNormal != -1) {
+        else if(person.getAge() >= Bus.minAgeToOldPassenger && indexPreferred == -1 && indexNormal != -1)
             this.normalChairs.set(indexNormal, person);
-            return true;
-        }
+       
 
         //Case not old person and exists vacant on normal chairs
-        else if(person.getAge() < Bus.minAgeToOldPassenger && indexNormal != -1) { 
+        else if(person.getAge() < Bus.minAgeToOldPassenger && indexNormal != -1)
             this.normalChairs.set(indexNormal, person);
-            return true;
-        }
+       
 
         //Case not old person and not exists vacant normal chairs, but exists vacant on preferred chairs
-        else if(person.getAge() < Bus.minAgeToOldPassenger && indexNormal == -1 && indexPreferred != -1) {
+        else if(person.getAge() < Bus.minAgeToOldPassenger && indexNormal == -1 && indexPreferred != -1)
             this.preferredChairs.set(indexPreferred, person);
-            return true;
-        }
-
-        return false;
-
     }
 
-    public void out(String name) { 
+    public void out(String name) throws ExceptionController {
 
         for(int i = 0; i < this.preferredChairs.size(); i++) {
             if(this.preferredChairs.get(i) == null)
@@ -86,12 +73,8 @@ public class Bus {
             }
         }
 
-        JOptionPane.showMessageDialog(
-            null,
-            "Fail: Dont exists one passenger with this name", 
-            "Error!", 
-            0
-        );
+        throw new ExceptionController("Error", "Fail: Dont exists one passenger with this name");
+        
 
     }
 

@@ -1,12 +1,18 @@
 import javax.swing.JOptionPane;
 
+import Exceptions.ExceptionController;
 import models.Bus;
 import models.Passenger;
 
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    
+    public static void showMessage(String title, String message, boolean success) {
+        JOptionPane.showMessageDialog(null, message, title, (success ? 1 : 0));
+    }
+    public static void main(String[] args) throws ExceptionController {
         Bus bus = null;
+        
         while(true) {
             String[] input = JOptionPane.showInputDialog(
                 null, 
@@ -24,27 +30,15 @@ public class App {
                 try {
                     Passenger person = new Passenger(input[1], Integer.parseInt(input[2]));
                     bus.in(person);
+                    App.showMessage("Success", "Passenger add successfully", true);
                 }catch(NumberFormatException err) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Fail: you send age with characters not numerics, try again",
-                        "Error!",
-                        0
-                    );
+                    App.showMessage("Error", "Fail: you send age with characters not numerics, try again", false);
                 }catch(NullPointerException err) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Fail, the bus were dont initialized",
-                        "Error!",
-                        0
-                    );
+                    App.showMessage("Error", "Fail: the bus were dont initialized", false);
                 }catch(ArrayIndexOutOfBoundsException err) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Fail, you dont passed all data required",
-                        "Error!",
-                        0
-                    );
+                    App.showMessage("Error", "Fail: you dont passed all data required", false);
+                }catch(ExceptionController err) {
+                    App.showMessage(err.getTitle(), err.getMessage(), false);
                 }
             }
 
@@ -52,57 +46,38 @@ public class App {
                 if(bus != null) {
                     try {
                         bus.out(input[1]);
+                        App.showMessage("Success", "Passenger out successfully", true);
                     }catch(ArrayIndexOutOfBoundsException err) {
-                        JOptionPane.showMessageDialog(
-                            null,
-                            "Fail, you dont passed all data required",
-                            "Error!",
-                            0
-                        );
+                        App.showMessage("Error", "Fail: you dont passed all data required", false);
+                    }catch(ExceptionController err) {
+                        App.showMessage(err.getTitle(), err.getMessage(), false);
                     }
                 }
                 else {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Fail, you dont initialized the bus, try again",
-                        "Error!",
-                        0
-                    );
+                    App.showMessage("Error","Fail: you dont initialized the bus, try again", false);
                 }
             }
 
             else if(input[0].equals("init")) {
                 try {
                     bus = new Bus(Integer.parseInt(input[1]), Integer.parseInt(input[2]));
+                    App.showMessage("Success", "Bus initialized successfully!", true);
                 }catch(NumberFormatException err) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Fail: you send characters not numerics, try again",
-                        "Error!",
-                        0
-                    );
+                    App.showMessage("Error","Fail: you send characters not numerics, try again", false);
+                }catch(ArrayIndexOutOfBoundsException err) {
+                    App.showMessage("Error", "Fail: you dont passed all data required", false);
                 }
             }
             
             else if(input[0].equals("show")) {
-                if(bus == null) {
-                    JOptionPane.showMessageDialog(
-                        null, 
-                        "[ ]",
-                        "Passengers",
-                        1
-                    );
-                }
-                else {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        bus.toString(),
-                        "Passengers",
-                        1
-                    );
-                }
-
+                if(bus == null) 
+                    App.showMessage("Passengers", "[ ]", true);
+                else 
+                    App.showMessage("Passengers", bus.toString(), true);  
             }
-       }
+
+            else
+                App.showMessage("Error", "Invalid command!", false);
+        }
     }
 }

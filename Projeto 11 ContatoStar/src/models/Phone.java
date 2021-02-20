@@ -1,7 +1,6 @@
 
 package models;
 
-import java.util.regex.*;
 
 public class Phone {
     private String label;
@@ -16,12 +15,13 @@ public class Phone {
     public String getNumber() { return this.number; }
 
     public static boolean validationNumber(String number) {
-        Pattern pattern = Pattern.compile("^[0-9]+$");
-        Matcher matcher = pattern.matcher(number);
-        
-        if(matcher.find())
-            return true;
-        return false;
+        String valid = "0123456789()-";
+        for(char c : number.toCharArray()) {
+            if(valid.indexOf(c) < 0)
+                return false;
+        }
+
+        return true;
     }
 
     @Override
