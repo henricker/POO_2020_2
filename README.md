@@ -24,11 +24,12 @@
 - [Projeto 07 Topic](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2007%20topic), como mencionado na aula escolhi esse projeto para realizar o tratamento de erros e exceções.<br>
 - [Projeto 10 Bilheteria](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2010%20Bilheteria)
 ### Exercícios de lógica
-- [Projeto 13 Twitter](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2013%20Twitter) <br>
+- [Projeto 12 Twitter](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2012%20Twitter) <br>
 - [Projeto 14 Matrícula](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2014%20Matr%C3%ADcula)
-- [Projeto 15 Whatsapp](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2015%20whatsapp%20I)
+- [Projeto 16 Whatsapp](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2016%20whatsapp%20I)
 ### Herança, polimorfismo, interfaces 
 - [Projeto 11 ContatoStar](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2011%20ContatoStar)
-- [Projeto 12 Agência](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2012%20%20Ag%C3%AAncia)
-- [Projeto 16 Whatsapp II](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2016%20whatsapp%20II)
+- [Projeto 13 Agência](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2013%20%20Ag%C3%AAncia)
+- [Projeto 15 Hospital](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2015%20hospital)
+- [Projeto 17 Whatsapp II](https://github.com/henricker/POO_2020_2/tree/main/Projeto%2017%20whatsapp%20II)
  
