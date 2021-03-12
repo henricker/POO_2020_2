@@ -1,13 +1,13 @@
-package src.models;
+package models;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import src.error.Error;
-import src.models.interfaces.IBatePapense;
-import src.models.interfaces.IDoctor;
-import src.models.interfaces.IPatient;
+import error.Error;
+import models.interfaces.IBatePapense;
+import models.interfaces.IDoctor;
+import models.interfaces.IPatient;
 
 public class Patient implements IPatient, IBatePapense {
   private String id;

@@ -1,7 +1,7 @@
-package src.models.interfaces;
+package models.interfaces;
 
-import src.error.Error;
-import src.models.Message;
+import error.Error;
+import models.Message;
 
 import java.util.List;
 

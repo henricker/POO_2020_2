@@ -1,5 +1,5 @@
-import src.view.View;
-import src.error.Error;
+import view.View;
+import error.Error;
 
 public class App {
 

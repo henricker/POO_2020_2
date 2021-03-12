@@ -1,8 +1,8 @@
-package src.models.interfaces;
+package models.interfaces;
 
 import java.util.Collection;
 
-import src.error.Error;
+import error.Error;
 
 public interface IDoctor {
   public String getId();

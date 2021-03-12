@@ -1,8 +1,8 @@
-package src.view;
+package view;
 
-import src.controller.Hospital;
-import src.error.Error;
-import src.util.IOController;
+import controller.Hospital;
+import error.Error;
+import util.IOController;
 
 public class View {
   private Hospital h;

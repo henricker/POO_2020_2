@@ -1,12 +1,12 @@
-package src.controller;
+package controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import src.error.Error;
-import src.models.Doctor;
-import src.models.Message;
-import src.models.Patient;
+import error.Error;
+import models.Doctor;
+import models.Message;
+import models.Patient;
 
 public class Hospital {
   private List<Patient> patients;
