@@ -2,24 +2,20 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import error.Error;
-import models.interfaces.IBatePapense;
 import models.interfaces.IDoctor;
 import models.interfaces.IPatient;
 
-public class Patient implements IPatient, IBatePapense {
+public class Patient extends Human implements IPatient{
   private String id;
   private String diagnosys;
-  private List<Message> inbox;
   private Collection<IDoctor> doctors;
 
   public Patient(String id, String diagnosys) {
     this.id = id;
     this.diagnosys = diagnosys;
     this.doctors = new ArrayList<IDoctor>();
-    this.inbox = new ArrayList<Message>();
   }
 
   @Override
@@ -89,27 +85,4 @@ public class Patient implements IPatient, IBatePapense {
 
     return sb.toString();
   }
-
-  @Override
-  public void sendMessage(Message msg, IBatePapense batePapense) throws Error {
-    if(!(batePapense instanceof Doctor))
-      throw new Error("This is not instance of doctor", "InstanceError");
-    if(!this.doctors.contains((Doctor) batePapense))
-      throw new Error("Patient does not know this doctor","DoctorNotFound");
-    batePapense.addMessage(msg);
-  }
-
-  @Override
-  public void addMessage(Message msg) {
-    this.inbox.add(msg);
-  }
-
-  @Override
-  public List<Message> getInbox() {
-    List<Message> msgs = new ArrayList<Message>(this.inbox);
-    this.inbox.clear();
-
-    return msgs;
-  }
-  
 }

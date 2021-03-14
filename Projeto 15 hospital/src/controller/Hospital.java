@@ -18,7 +18,6 @@ public class Hospital {
   }
 
   public void addPatient(String id, String diagnosys) throws Error {
-    //System.out.println(id);
     if(this.getPatient(id) != null)
       throw new Error("Patient already exists", "PatientAlreadyExists");
 
@@ -62,11 +61,17 @@ public class Hospital {
       throw new Error("Doctor not found", "DoctorNotFound");
     
     if(patientSender != null && doctorRecipient != null) {
+      if(!patientSender.getDoctors().contains(doctorRecipient))
+        throw new Error("Doctor does not exist on the doctor's responsibility list", "DoctorNotFound");
+
       patientSender.sendMessage(new Message(patientSender.getId(), message), doctorRecipient);
       return;
     }
 
     if(doctorSender != null && patientRecipient != null) {
+      if(!doctorSender.getPatients().contains(patientRecipient))
+        throw new Error("Patient does not exist on the doctor's responsibility list", "PatientNotFound");
+        
       doctorSender.sendMessage(new Message(doctorSender.getId(), message), patientRecipient);
       return;
     }
@@ -91,6 +96,9 @@ public class Hospital {
     inbox.forEach(message -> {
       sb.append(message + "\n");
     });
+
+    if(inbox.isEmpty())
+      sb.append("Empty!");
       
     return sb.toString();
   }
