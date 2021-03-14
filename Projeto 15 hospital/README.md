@@ -20,7 +20,7 @@
   4. O que aprendeu?
   - Reforçou meus conhecimentos sobre o uso de interfaces, e aprendi a como fazer múltiplas implementações de interface em uma classe, o que será muito útil para meus futuros projetos.
 
-  - Os exercícios estão me ajudando a organizar minha lógica e organizar bem os projetos.
+  - Os exercícios estão ajudando a organizar minha lógica e melhorar a qualidade dos meus os projetos.
 
   5. Quanto tempo demorou?
   - 120 min
