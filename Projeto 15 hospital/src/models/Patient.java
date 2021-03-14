@@ -76,13 +76,11 @@ public class Patient extends Human implements IPatient{
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("Pat: " + this.id + ":" + this.diagnosys + " Doc: [ ");
-
     this.doctors.forEach(doctor -> {
       sb.append(doctor.getId() + " ");
     });
 
     sb.append("]");
-
     return sb.toString();
   }
 }
