@@ -72,6 +72,9 @@ public class View {
       else if(line[0].equals("show")) {
         IOController.showMessage(bank.toString(), "Accounts", true);
       }
+
+      else
+        IOController.showMessage("Invalid command", "Fail", false);
     }
   }
 }
